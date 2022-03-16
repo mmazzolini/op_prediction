@@ -17,7 +17,8 @@ from db_insert import insert, insert_pred
 
 def main():
 
-    ### define the location of the inputs
+    ### define the location of the inputs ###
+    
     # when the ZAMG data production is operational change path from downscaled_archive to production//02_downscaled
     # + when multiple .nc files will be available in the production folder:
     #change readnetcdf_in_shp_db to readnetcdfS_in_shp_db  (add the S)
@@ -32,6 +33,9 @@ def main():
     #path where the climatology file is stored.
     path = r'C:\Users\mmazzolini\OneDrive - Scientific Network South Tyrol\Documents\conda\Runoff_prediction\model_predict\climatology\\'
     
+    #path where the models are stored.
+    model_fld=r'C:\Users\mmazzolini\OneDrive - Scientific Network South Tyrol\Documents\conda\Runoff_prediction\model_train\models\\'
+
     #set the unit for the prediction (#DONOT CHANGE: MODELS ARE TRAINED WITH THIS t_unit)
     t_unit=10
 
@@ -182,8 +186,7 @@ def main():
 
 
             #load the model
-            fld=r'C:\Users\mmazzolini\OneDrive - Scientific Network South Tyrol\Documents\conda\Runoff_prediction\model_train\models\\'
-            model=load(fld+STAT_CODE+'.joblib')
+            model=load(model_fld+STAT_CODE+'.joblib')
 
             #predict the discharge and add ancillary information
 
