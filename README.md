@@ -3,7 +3,7 @@
  operational discharge prediction for the ADO project.
  to create the needed environment type in conda: 
  
- $conda create --name myenv --file spec-file.txt
+ $ conda create --name myenv --file spec-file.txt
 
 Input data from ZAMG is available on the EURAC ADO project repository, that could be mounted at letter Z:
 
